@@ -21,14 +21,10 @@ function App() {
       {movieList.length === 0 ? (
         "loading..."
       ) : (
-        <MovieItem
-          cover={movieList[1].medium_cover_image}
-          title={movieList[1].title}
-          rating={movieList[1].rating}
-          runtime={movieList[1].runtime}
-          genres={movieList[1].genres}
-          summary={movieList[1].summary}
-        />
+        <>
+          <MovieItem cover={movieList[1].medium_cover_image} title={movieList[1].title} rating={movieList[1].rating} runtime={movieList[1].runtime} genres={movieList[1].genres} />
+          <MovieItem cover={movieList[0].medium_cover_image} title={movieList[0].title} rating={movieList[0].rating} runtime={movieList[0].runtime} genres={movieList[0].genres} />
+        </>
       )}
     </div>
   );
