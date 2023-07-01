@@ -1,5 +1,13 @@
-function MovieItem(props) {
-  return <div>영화 아이템</div>;
+function MovieItem({ cover, title, rating, runtime, genres, summary }) {
+  return (
+    <div className="movie-item">
+      <div className="movie-cover">
+        <img src={cover} alt={title} />
+      </div>
+      <div className="movie-title">{title}</div>
+      <div className="movie-summary">{summary}</div>
+    </div>
+  );
 }
 
 export default MovieItem;
