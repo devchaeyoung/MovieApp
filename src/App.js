@@ -4,7 +4,7 @@ function App() {
   const url = "https://yts.mx/api/v2/list_movies.json";
 
   async function getMovie() {
-    return await fetch(url)
+    await fetch(url)
       .then((res) => res.json())
       .then((data) => data.data.movies);
   }
