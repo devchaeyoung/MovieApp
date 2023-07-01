@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import MovieItem from "./components/MovieItem";
 
 function App() {
   const [movieList, setMovieList] = useState([]);
@@ -12,7 +13,7 @@ function App() {
   useEffect(() => {
     getMovie();
   }, [movieList]); //디펜더싱 배열 (의존성 배열)
-  return <div className="App">{movieList.length === 0 ? "loading..." : "영화 불러오기 완료!"}</div>;
+  return <div className="App">{movieList.length === 0 ? "loading..." : <MovieItem props={movieList[0]} />}</div>;
 }
 
 export default App;
